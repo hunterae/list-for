@@ -6,7 +6,7 @@
   <% if records %>
     <% records.each do |record| %>
       <%= content_tag :li, options[:item_html] do %>
-        <%= list.use :item, :record => record %>
+        <%= list.use :item, record %>
       <% end %>
     <% end %>
   <% else %>
