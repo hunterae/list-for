@@ -1,12 +1,12 @@
-<%= list.define :item do |options| %>
-  <%= options[:field] ? options[:record].send(options[:field]) : options[:record].to_s %>
+<%= list.define :item do |record, options| %>
+  <%= options[:field] ? record.send(options[:field]) : record.to_s %>
 <% end %>
 
 <%= list.define :items do |options| %>
   <% if records %>
     <% records.each do |record| %>
       <%= content_tag :li, options[:item_html] do %>
-        <%= list.use :item, record %>
+        <%= list.use :item, record, options %>
       <% end %>
     <% end %>
   <% else %>
