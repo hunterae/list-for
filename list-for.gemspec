@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{list-for}
-  s.version = "0.0.3"
+  s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrew Hunter"]
-  s.date = %q{2011-05-27}
+  s.date = %q{2011-05-31}
   s.description = %q{list-for is a list builder for an array of objects, easily allowing overriding of how any aspect of the list is generated}
   s.email = %q{hunterae@gmail.com}
   s.extra_rdoc_files = [
@@ -37,16 +37,16 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<list-for>, [">= 0"])
-      s.add_runtime_dependency(%q<rails>, ["~> 3.0.0"])
+      s.add_runtime_dependency(%q<rails>, [">= 3.0.0"])
       s.add_runtime_dependency(%q<building-blocks>, [">= 0"])
     else
       s.add_dependency(%q<list-for>, [">= 0"])
-      s.add_dependency(%q<rails>, ["~> 3.0.0"])
+      s.add_dependency(%q<rails>, [">= 3.0.0"])
       s.add_dependency(%q<building-blocks>, [">= 0"])
     end
   else
     s.add_dependency(%q<list-for>, [">= 0"])
-    s.add_dependency(%q<rails>, ["~> 3.0.0"])
+    s.add_dependency(%q<rails>, [">= 3.0.0"])
     s.add_dependency(%q<building-blocks>, [">= 0"])
   end
 end
